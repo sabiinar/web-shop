@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,6 @@
 <body>
     
     <?php
-        session_start();
         require_once('funkcije/klase.php');
         require_once('funkcije/podaci/podaci.php');
 
