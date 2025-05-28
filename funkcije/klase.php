@@ -48,7 +48,7 @@ class WebSite
         echo "<p class='footer-h'>Kontakt: </p>";
         echo "<p>Telefon: 06987654321</p>";
         echo "<p>E-mail: korisnicka.podrska@shoes.com</p>";
-        echo "<p class='footer-copyright'>&copy Copyright" . strftime(' %Y ', time()). "shoes-design-team</p>";
+        echo "<p class='footer-copyright'>&copy Copyright " . date('Y') . " shoes-design-team</p>";
         echo "</div>";
         echo "<div class='footer-logo'>SHOES</div>";
         echo "</footer>";
