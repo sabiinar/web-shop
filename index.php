@@ -1,5 +1,5 @@
 <?php
-ob_start();  // Pokrećemo output buffering, sprečava slanje outputa pre header-a
+ob_start();  
 session_start();
 
 require_once('funkcije/klase.php');
@@ -13,7 +13,7 @@ $prikaz_proizvoda->prikazi_proizvode();
 
 $WebSite->footer();
 
-ob_end_flush();  // Slanje buffered outputa ka browseru
+ob_end_flush(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
