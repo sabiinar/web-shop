@@ -18,7 +18,7 @@ CREATE TABLE `proizvodi` (
     `pol` enum('m','z') COLLATE utf8mb4_unicode_ci NOT NULL,
     `cena` int(20) unsigned NOT NULL,
     `popust` int(20) NOT NULL DEFAULT 0,
-    `slika` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `slika` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
     PRIMARY KEY (`id_proizvoda`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -381,18 +381,12 @@ CREATE TABLE `korisnik` (
   `telefon` varchar(20) NOT NULL,
   `grad` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `postanski_broj` int(20) NOT NULL,
-  `lozinka` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lozinka` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
    `nivo` tinyint(1) NOT NULL DEFAULT 0,
    PRIMARY KEY (`id_korisnika`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `korisnik` (`ime`, `prezime`, `email`, `telefon`, `grad`, `postanski_broj`, `lozinka`, `nivo`) VALUES
-('admin', 'istrator', 'admin@shoes.com', 060000000, 'grad', 10000, 'admin', 1),
-('korisnik1', 'korisnik1', 'korisnik1@gmail.com', 0611234567, 'grad1', 11000, 'korisnik1', 0),
-('korisnik2', 'korisnik2', 'korisnik2@gmail.com', 0621234567, 'grad2', 12000, 'korisnik2', 0),
-('korisnik3', 'korisnik3', 'korisnik3@gmail.com', 0631234567, 'grad3', 13000, 'korisnik3', 0),
-('korisnik4', 'korisnik4', 'korisnik4@gmail.com', 0641234567, 'grad4', 14000, 'korisnik4', 0),
-('korisnik5', 'korisnik5', 'korisnik5@gmail.com', 0651234567, 'grad5', 15000, 'korisnik5', 0);
+
 
 CREATE TABLE `stavke_korpe` (
     `id_stavke` INT NOT NULL AUTO_INCREMENT ,
